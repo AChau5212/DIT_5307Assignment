@@ -1,0 +1,5 @@
+customer\ejb\CustomerManager.class
+customer\web\util\JsfUtil.class
+customer\web\CustomerController.class
+customer\entity\Customer_.class
+customer\entity\Customer.class
