@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
  * @author ICT-Student
  */
 @Entity
-@NamedQuery(name = "findAll", query = "SELECT c FROM Customer c")
+@NamedQuery(name = "findAllCustomer", query = "SELECT c FROM Customer c")
 public class Customer implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -31,6 +31,25 @@ public class Customer implements Serializable {
     private String lastName;
     @Pattern(regexp = "^\\d{8}$", message = "Not a valid mobile phone number")
     private String mobilePhone;
+    @Min(1)
+    private int flightNo;
+
+
+    public int getFlightNo() {
+        return flightNo;
+    }
+
+    public void setFlightNo(int flightNo) {
+        this.flightNo = flightNo;
+    }
+
+//    public Date getDate() {
+//        return date;
+//    }
+//
+//    public void setDate(Date date) {
+//        this.date = date;
+//    }
     
     public Long getId() {
         return id;

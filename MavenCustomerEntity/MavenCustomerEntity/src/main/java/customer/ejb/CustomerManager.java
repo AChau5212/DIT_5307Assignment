@@ -28,15 +28,16 @@ public class CustomerManager {
         em.persist(customer);
     }
     
-     public Customer update(Customer customer) {
+    public Customer update(Customer customer) {
         return em.merge(customer);
     }
+    
 
     public void delete(Customer customer) {
         em.remove(em.merge(customer));  // entity must be managed to be removed
     }
     
     public List<Customer> getAll() {
-        return em.createNamedQuery("findAll", Customer.class).getResultList();
+        return em.createNamedQuery("findAllCustomer", Customer.class).getResultList();
     }
 }

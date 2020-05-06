@@ -64,7 +64,7 @@ public class CustomerController implements Serializable {
             return "View";
         }
     }
-    
+ 
     public String delete() {
         customerManager.delete(customer);
         customer = null;
@@ -79,6 +79,7 @@ public class CustomerController implements Serializable {
         }
         return items;
     }
+    
     
     public String prepareAdd() {
         customer = new Customer();
