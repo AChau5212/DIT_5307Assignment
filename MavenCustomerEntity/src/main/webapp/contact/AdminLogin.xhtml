@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Enter Flight Data"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form>
+                <table>
+                    <tr>
+                        <td><h:outputLabel value="Username:" 
+                                           for="username" /></td>
+                        <td><h:inputText id="username" 
+                                         value="#{staffController.staff.username}" />
+                        </td>
+<!--                        <td><h:message for="username" errorStyle="font-size: 0.9em; color: OrangeRed" /></td>-->
+                    </tr>
+                    <tr>
+                        <td><h:outputLabel value="Password:" 
+                                           for="password" /></td>
+                        <td><h:inputText id="password" 
+                                         value="#{staffController.staff.password}" />
+                        </td>
+<!--                        <td><h:message for="password" errorStyle="font-size: 0.9em; color: OrangeRed" /></td>-->
+                    </tr>
+                </table>
+                <h:commandButton value="Add" action="#{staffController.save}" />
+                <h:commandButton value="Login" action="#{staffController.login}" rendered="#{not staffController.login}" />
+                <br></br>
+                <br></br>
+                <h:commandLink value="Browse" action="#{customerController.prepareList}" immediate="true" rendered="#{not staffController.login}" />
+
+
+            </h:form>
+              <div class="messagecolor">
+                <h:messages showSummary="true" 
+                            showDetail="false"
+                            errorStyle="color: #d20005" 
+                            infoStyle="color: green"/>
+            </div>
+            
+          
+            
+            
+            
+            
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,9 @@
+customer\ejb\CustomerManager.class
+customer\entity\Customer.class
+admin\entity\Staff_.class
+admin\entity\Staff.class
+admin\web\StaffController.class
+customer\web\util\JsfUtil.class
+customer\web\CustomerController.class
+customer\entity\Customer_.class
+admin\ejb\StaffManager.class

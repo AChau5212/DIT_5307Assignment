@@ -1,0 +1,58 @@
+/* The styles for the elements */
+body {
+    font-family: Univers, "Univers 55", "Lucida Grande CE", lucida, Helvetica, san-serif;  
+}
+h1 {     
+    font-size: 140%;
+    color: teal;
+    margin-bottom: .5em;    
+}
+h2 {     
+    font-size: 120%;
+    color: teal;
+    margin-bottom: .5em;    
+}
+
+br {
+    clear: both;
+}
+
+ul.face_msg {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+}
+td {
+    padding: 0 0.5em 8px 0;
+}
+
+form.list th, form.list td {
+    border: 1px solid;
+    border-color: #cccccc #999999;
+}
+form.list th {
+    letter-spacing: 3px;
+    padding: 6px;
+    background-color: white;
+}
+form.list td {
+    padding-bottom: 0;
+}
+form.list tr:nth-of-type(odd) {
+    background-color: #e5e5e5;
+    color: black;
+}
+form.list tr:nth-of-type(even) {
+    background-color: #cccccc;
+    color: black;
+}
+
+.row_button {
+    margin: 2px;
+    font-size: 0.9em;
+}

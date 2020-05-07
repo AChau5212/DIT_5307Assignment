@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="All Customer Data"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: #d20005" warnStyle="color: Tomato;"
+                            infoStyle="color: green; border: 1px solid LightSteelBlue"
+                            layout="list" styleClass="face_msg" />
+            </h:panelGroup>
+            <h:form styleClass="list">
+                <h:dataTable value="#{customerController.items}" var="customer">
+                    <h:column>
+                        <f:facet name="header">First name</f:facet>
+                            #{customer.firstName}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Last name</f:facet>
+                            #{customer.lastName}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Mobile phone</f:facet>
+                            #{customer.mobilePhone}
+                    </h:column>
+                     <h:column>
+                        <f:facet name="header">Flight No</f:facet>
+                            #{customer.flightNo}
+                     </h:column>
+           
+                    <h:column>
+                        <h:commandButton value="View" action="#{customerController.prepareView}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Edit" action="#{customerController.prepareEdit}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Delete" action="#{customerController.prepareDelete}"
+                                         styleClass="row_button" />
+                    </h:column>
+         
+                   
+           
+                    <h:column>
+                        <h:commandButton value="View" action="#{customerController.prepareView}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Edit" action="#{customerController.prepareEdit}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Delete" action="#{customerController.prepareDelete}"
+                                         styleClass="row_button" />
+                    </h:column>
+                </h:dataTable>
+                
+                <br />
+                <h:commandLink value="Add New Customer" action="#{customerController.prepareAdd}" />
+            </h:form>
+              <h:form styleClass="list">
+                <h:dataTable value="#{staffController.items}" var="staff">
+                    <h:column>
+                        <f:facet name="header">username</f:facet>
+                            #{staff.username}
+                    </h:column>
+                    
+                     <h:column>
+                        <f:facet name="header">password</f:facet>
+                            #{staff.password}
+                     </h:column>
+           
+                    <h:column>
+                        <h:commandButton value="View" action="#{customerController.prepareView}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Edit" action="#{customerController.prepareEdit}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Delete" action="#{customerController.prepareDelete}"
+                                         styleClass="row_button" />
+                    </h:column>
+         
+                   
+           
+                    <h:column>
+                        <h:commandButton value="View" action="#{customerController.prepareView}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Edit" action="#{customerController.prepareEdit}"
+                                         styleClass="row_button" />
+                        <h:commandButton value="Delete" action="#{customerController.prepareDelete}"
+                                         styleClass="row_button" />
+                    </h:column>
+                </h:dataTable>
+                
+                <br />
+                <h:commandLink value="Add New Customer" action="#{customerController.prepareAdd}" />
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
+
